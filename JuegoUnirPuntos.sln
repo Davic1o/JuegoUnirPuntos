@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentacionUnirPuntos", "PresentacionUnirPuntos\PresentacionUnirPuntos.csproj", "{9629B34C-A71B-4B56-B5D9-86BBF5ED346C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NegocioUnirPuntos", "NegocioUnirPuntos\NegocioUnirPuntos.csproj", "{7BB16353-9370-4DA3-97CB-4BB2C8A84C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9629B34C-A71B-4B56-B5D9-86BBF5ED346C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9629B34C-A71B-4B56-B5D9-86BBF5ED346C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9629B34C-A71B-4B56-B5D9-86BBF5ED346C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9629B34C-A71B-4B56-B5D9-86BBF5ED346C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB16353-9370-4DA3-97CB-4BB2C8A84C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB16353-9370-4DA3-97CB-4BB2C8A84C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB16353-9370-4DA3-97CB-4BB2C8A84C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB16353-9370-4DA3-97CB-4BB2C8A84C83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21AE2BAD-C992-42EC-9E74-BC02743E949C}
+	EndGlobalSection
+EndGlobal
