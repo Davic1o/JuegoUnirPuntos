@@ -26,9 +26,7 @@ namespace NegocioUnirPuntos
             contadorLineas=0;
 
             puntos.Add(new Punto(50, 50));
-            puntos.Add(new Punto(150, 100));
-            puntos.Add(new Punto(200, 200));
-            puntos.Add(new Punto(200, 300));
+            puntos.Add(new Punto(150, 50));
         }
 
         public Punto EncontrarPuntoCercano(Punto punto)
@@ -59,21 +57,9 @@ namespace NegocioUnirPuntos
             contadorLineas++;
 
             // Verificar si se han unido todas las líneas
-            if (contadorLineas == 8)
-            {
-                mensaje = "¡Felicidades! Se han unido las ocho líneas.";
-            }
-            else if (contadorLineas > 8)
-            {
-                mensaje = "Se han unido más de ocho líneas.";
-            }
-            else if(contadorLineas>2)
-
-            {
-                mensaje = "Pregunta";
                 
                 AgregarNuevoPunto();
-            }
+            
         }
             private void AgregarNuevoPunto()
             {
