@@ -50,7 +50,6 @@ namespace PresentacionUnirPuntos
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblVidas = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnNextLevel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +58,7 @@ namespace PresentacionUnirPuntos
             // 
             this.pnlPantalla.BackgroundImage = global::PresentacionUnirPuntos.Properties.Resources.fondo_acuarela_pintada_mano_forma_cielo_nubes;
             this.pnlPantalla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlPantalla.Location = new System.Drawing.Point(0, 198);
+            this.pnlPantalla.Location = new System.Drawing.Point(12, 198);
             this.pnlPantalla.Name = "pnlPantalla";
             this.pnlPantalla.Size = new System.Drawing.Size(1077, 570);
             this.pnlPantalla.TabIndex = 0;
@@ -242,6 +241,7 @@ namespace PresentacionUnirPuntos
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(587, 55);
             this.txtRespuesta.TabIndex = 3;
+            this.txtRespuesta.TextChanged += new System.EventHandler(this.txtRespuesta_TextChanged);
             // 
             // lblDatos
             // 
@@ -249,10 +249,10 @@ namespace PresentacionUnirPuntos
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDatos.AutoSize = true;
             this.lblDatos.BackColor = System.Drawing.Color.Transparent;
-            this.lblDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatos.Location = new System.Drawing.Point(415, 258);
+            this.lblDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatos.Location = new System.Drawing.Point(12, 218);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(144, 51);
+            this.lblDatos.Size = new System.Drawing.Size(101, 36);
             this.lblDatos.TabIndex = 0;
             this.lblDatos.Text = "label1";
             // 
@@ -274,7 +274,6 @@ namespace PresentacionUnirPuntos
             this.panel2.Controls.Add(this.lblVidas);
             this.panel2.Controls.Add(this.lblVida);
             this.panel2.Controls.Add(this.btnCerrar);
-            this.panel2.Controls.Add(this.btnNextLevel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1107, 189);
             this.panel2.Name = "panel2";
@@ -311,19 +310,6 @@ namespace PresentacionUnirPuntos
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnNextLevel
-            // 
-            this.btnNextLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNextLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextLevel.Image = global::PresentacionUnirPuntos.Properties.Resources.flecha__1_;
-            this.btnNextLevel.Location = new System.Drawing.Point(0, 6);
-            this.btnNextLevel.Name = "btnNextLevel";
-            this.btnNextLevel.Size = new System.Drawing.Size(185, 144);
-            this.btnNextLevel.TabIndex = 0;
-            this.btnNextLevel.UseVisualStyleBackColor = true;
-            this.btnNextLevel.Click += new System.EventHandler(this.btnNextLevel_Click);
-            // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -350,7 +336,6 @@ namespace PresentacionUnirPuntos
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -368,7 +353,6 @@ namespace PresentacionUnirPuntos
         private System.Windows.Forms.Label lblPuntaje;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDatos;
-        private System.Windows.Forms.Button btnNextLevel;
         private System.Windows.Forms.Label lblVida;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnComprobar1;
