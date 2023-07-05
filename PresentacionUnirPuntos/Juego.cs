@@ -14,7 +14,7 @@ namespace PresentacionUnirPuntos
 {
     public partial class Juego : Form
     {
-        string Pregunta1 = "PRegunta1";
+        string Pregunta1 = "Pregunta1";
         string Respuesta1 = "1";
         string Pregunta2 = "Pregunta2";
         string Respuesta2 = "2";
@@ -55,20 +55,24 @@ namespace PresentacionUnirPuntos
         private bool validador5;
         private bool validador6;
         private bool validador7;
-        private bool validador8;
         public Juego(string dato)
         {
             InitializeComponent();
             lblUsuario.Text = "Bienvenido "+dato;
             lblRespuesta.Visible = false;
-            btnComprobar.Visible = false;
+
             lblDatos.Visible = false;
             txtRespuesta.Visible = false;
             Vidas = 3;
-            
-            
-            
-            
+            lblPuntaje.Text = "0";
+            btnComprobar1.Visible = false;
+            btnComprobar2.Visible = false;
+            btnComprobar3.Visible = false;
+            btnComprobar4.Visible = false;
+            btnComprobar5.Visible = false;
+            btnComprobar6.Visible = false;
+            btnComprobar7.Visible = false;
+            btnComprobar8.Visible = false;
             puntosManager = new PuntosManager();
             Opcion1 = new PreguntaRespuesta(Pregunta1, Respuesta1);
             Opcion2 = new PreguntaRespuesta(Pregunta2, Respuesta2);
@@ -109,11 +113,7 @@ namespace PresentacionUnirPuntos
                         Punto punto1 = puntosUnidos[i];
                         Punto punto2 = puntosUnidos[i + 1];
                         e.Graphics.DrawLine(Pens.Blue, punto1.X, punto1.Y, punto2.X, punto2.Y);
-                       
-                        
-
                     }
-
                 }
 
                 // Dibuja la línea en tiempo real mientras se arrastra el punto seleccionado
@@ -122,13 +122,8 @@ namespace PresentacionUnirPuntos
 
                     Punto puntoActual = new Punto(PointToClient(MousePosition).X, PointToClient(MousePosition).Y);
                     e.Graphics.DrawLine(Pens.Blue, puntoSeleccionado.X, puntoSeleccionado.Y, puntoActual.X, puntoActual.Y);
-                    
-
-                }
-           
+                }  
         }
-
-
         private void btnNextLevel_Click(object sender, EventArgs e)
         {
             puntosManager.Reiniciar();
@@ -142,12 +137,6 @@ namespace PresentacionUnirPuntos
             fri.Show();
             this.Hide();
         }
-
-        private void Juego_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void pnlPantalla_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -196,7 +185,7 @@ private void pnlPantalla_MouseUp(object sender, MouseEventArgs e)
                         validador5 = true;
                         validador6 = true;
                         validador7 = true;
-                        validador8 = true;
+                      
 
                     }
                     else
@@ -287,98 +276,328 @@ private void pnlPantalla_MouseUp(object sender, MouseEventArgs e)
             if (contarLineas == 1 && validador)
             {
                 mostrarPregunta(Pregunta1);
+                btnComprobar1.Visible = true;
             }
             if (contarLineas == 2 && validador1)
             {
                 mostrarPregunta(Pregunta2);
-
+                btnComprobar2.Visible = true;
             }
             if (contarLineas == 3 && validador2)
             {
                 mostrarPregunta(Pregunta3);
+                btnComprobar3.Visible = true;
             }
             if (contarLineas == 4 && validador3)
             {
                 mostrarPregunta(Pregunta4);
+                btnComprobar4.Visible = true;
             }
             if (contarLineas == 5 && validador4)
             {
                 mostrarPregunta(Pregunta5);
+                btnComprobar5.Visible = true;
             }
             if (contarLineas == 6 && validador5)
             {
                 mostrarPregunta(Pregunta6);
+                btnComprobar6.Visible = true;
             }
             if (contarLineas == 7 && validador6)
             {
                 mostrarPregunta(Pregunta7);
+                btnComprobar7.Visible = true;
             }
             if (contarLineas == 8 && validador7)
             {
                 mostrarPregunta(Pregunta8);
+                btnComprobar8.Visible = true;
             }
-            else
-            {
-                MessageBox.Show("Felicidades eres un Pro");
-                Inicio fri = new Inicio();
-                this.Hide();
-                fri.Show();
 
-            }
         }
         private void pnlPantalla_MouseMove(object sender, MouseEventArgs e)
         {
 
         }
 
-        private void btnComprobar_Click(object sender, EventArgs e)
+        private void btnComprobar1_Click(object sender, EventArgs e)
         {
-           
             if (Opcion1.ValidarRespuesta(txtRespuesta.Text))
-            {
-                Puntaje++;
+                {
+                Puntaje=Puntaje+2;
                 respuestasCorrectas++;
                 txtRespuesta.Text = string.Empty;
                 MessageBox.Show("Maravilloso bien contestado");
                 pnlPantalla.Visible = true;
                 lblRespuesta.Visible = false;
-                btnComprobar.Visible = false;
+                btnComprobar1.Visible = false;
                 lblDatos.Visible = false;
                 txtRespuesta.Visible = false;
-                lblPuntaje.Refresh();
+                lblPuntaje.Text = Puntaje.ToString();
 
             }
+          
             else
             {
-                Vidas=Vidas-1;
-                MessageBox.Show("Respuesta equivocada");
-                lblPuntaje.Text=Puntaje.ToString();
-                lblVidas.Text=Vidas.ToString();
-                if (Vidas==0)
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
                 {
                     MessageBox.Show("Game Over");
                     Inicio inicio = new Inicio();
                     this.Hide();
-                   inicio.Show();
+                    inicio.Show();
                 }
             }
-            
         }
         public void mostrarPregunta(string pregunta)
         {
             MessageBox.Show("Contesta la Pregunta");
+            //btnComprobar1.Visible = true;
             lblDatos.Text = pregunta;
             pnlPantalla.Visible = false;
             lblRespuesta.Visible = true;
-            btnComprobar.Visible = true;
+
             lblDatos.Visible = true;
             txtRespuesta.Visible = true;
             lblPuntaje.Text=Puntaje.ToString();
             lblVidas.Text=Vidas.ToString();
 
         }
-       
-       
+
+        private void btnComprobar8_Click(object sender, EventArgs e)
+        {
+            if (Opcion8.ValidarRespuesta(txtRespuesta.Text))
+            {
+
+                Puntaje=Puntaje+2;
+                respuestasCorrectas++;
+                txtRespuesta.Text = string.Empty;
+                MessageBox.Show("Maravilloso bien contestado");
+                lblPuntaje.Text = Puntaje.ToString();
+                MessageBox.Show("Felicidades tu puntaje es:" + Puntaje);
+                Inicio fri = new Inicio();
+                this.Hide();
+                fri.Show();
+            }
+
+            else
+            {
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
+                {
+                    MessageBox.Show("Game Over");
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+            }
+
+        }
+
+        private void btnComprobar4_Click(object sender, EventArgs e)
+        {
+            if (Opcion4.ValidarRespuesta(txtRespuesta.Text))
+            {
+
+                Puntaje=Puntaje+2;
+                respuestasCorrectas++;
+                txtRespuesta.Text = string.Empty;
+                MessageBox.Show("Maravilloso bien contestado");
+                pnlPantalla.Visible = true;
+                lblRespuesta.Visible = false;
+                btnComprobar4.Visible = false;
+                lblDatos.Visible = false;
+                txtRespuesta.Visible = false;
+                btnComprobar4.Visible = false;
+                lblPuntaje.Text = Puntaje.ToString();
+            }
+
+            else
+            {
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
+                {
+                    MessageBox.Show("Game Over");
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+            }
+
+        }
+
+        private void btnComprobar6_Click(object sender, EventArgs e)
+        {
+            if (Opcion6.ValidarRespuesta(txtRespuesta.Text))
+            {
+
+                Puntaje=Puntaje+2;
+                respuestasCorrectas++;
+                txtRespuesta.Text = string.Empty;
+                MessageBox.Show("Maravilloso bien contestado");
+                pnlPantalla.Visible = true;
+                lblRespuesta.Visible = false;
+                btnComprobar6.Visible = false;
+                lblDatos.Visible = false;
+                txtRespuesta.Visible = false;
+                btnComprobar6.Visible = false;
+                lblPuntaje.Text = Puntaje.ToString();
+            }
+
+            else
+            {
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
+                {
+                    MessageBox.Show("Game Over");
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+            }
+        }
+
+        private void btnComprobar5_Click(object sender, EventArgs e)
+        {
+            if (Opcion5.ValidarRespuesta(txtRespuesta.Text))
+            {
+
+                Puntaje=Puntaje+2;
+                respuestasCorrectas++;
+                txtRespuesta.Text = string.Empty;
+                MessageBox.Show("Maravilloso bien contestado");
+                pnlPantalla.Visible = true;
+                lblRespuesta.Visible = false;
+                btnComprobar5.Visible = false;
+                lblDatos.Visible = false;
+                txtRespuesta.Visible = false;
+                btnComprobar5.Visible = false;
+                lblPuntaje.Text = Puntaje.ToString();
+            }
+
+            else
+            {
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
+                {
+                    MessageBox.Show("Game Over");
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+            }
+
+        }
+
+        private void btnComprobar3_Click(object sender, EventArgs e)
+        {
+            if (Opcion3.ValidarRespuesta(txtRespuesta.Text))
+            {
+
+                Puntaje=Puntaje+2;
+                respuestasCorrectas++;
+                txtRespuesta.Text = string.Empty;
+                MessageBox.Show("Maravilloso bien contestado");
+                pnlPantalla.Visible = true;
+                lblRespuesta.Visible = false;
+                btnComprobar3.Visible = false;
+                lblDatos.Visible = false;
+                txtRespuesta.Visible = false;
+                btnComprobar3.Visible = false;
+                lblPuntaje.Text = Puntaje.ToString();
+            }
+
+            else
+            {
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
+                {
+                    MessageBox.Show("Game Over");
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+            }
+        }
+
+        private void btnComprobar7_Click(object sender, EventArgs e)
+        {
+            if (Opcion7.ValidarRespuesta(txtRespuesta.Text))
+            {
+
+                Puntaje=Puntaje+2;
+                respuestasCorrectas++;
+                txtRespuesta.Text = string.Empty;
+                MessageBox.Show("Maravilloso bien contestado");
+                pnlPantalla.Visible = true;
+                lblRespuesta.Visible = false;
+                btnComprobar7.Visible = false;
+                lblDatos.Visible = false;
+                txtRespuesta.Visible = false;
+                btnComprobar7.Visible = false;
+                lblPuntaje.Text = Puntaje.ToString();
+            }
+
+            else
+            {
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
+                {
+                    MessageBox.Show("Game Over");
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+            }
+
+        }
+
+        private void btnComprobar2_Click(object sender, EventArgs e)
+        {
+            if (Opcion2.ValidarRespuesta(txtRespuesta.Text))
+            {
+
+                Puntaje=Puntaje+2;
+                respuestasCorrectas++;
+                txtRespuesta.Text = string.Empty;
+                MessageBox.Show("Maravilloso bien contestado");
+                pnlPantalla.Visible = true;
+                lblRespuesta.Visible = false;
+                btnComprobar2.Visible = false;
+                lblDatos.Visible = false;
+                txtRespuesta.Visible = false;
+                btnComprobar2.Visible = false;
+                lblPuntaje.Text = Puntaje.ToString();
+            }
+
+            else
+            {
+                Vidas = Vidas - 1;
+                MessageBox.Show("Respuesta equivocada 4");
+                lblVidas.Text = Vidas.ToString();
+                if (Vidas == 0)
+                {
+                    MessageBox.Show("Game Over");
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+            }
+        }
     }
 }
 

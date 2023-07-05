@@ -26,12 +26,23 @@ namespace PresentacionUnirPuntos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            if (txtUser.Text == string.Empty)
+            {
+                string dato = "GamePLayer";
+                Juego jg = new Juego(dato);
+                jg.Show();
+                this.Close();
 
+            }
+            else
+            {
             string dato = txtUser.Text;
             Juego jg = new Juego(dato);
             jg.Show();
             this.Close();
 
+
+            }
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)

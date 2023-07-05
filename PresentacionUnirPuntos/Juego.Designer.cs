@@ -31,19 +31,26 @@ namespace PresentacionUnirPuntos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Juego));
             this.pnlPantalla = new System.Windows.Forms.Panel();
+            this.btnComprobar8 = new System.Windows.Forms.Button();
+            this.btnComprobar7 = new System.Windows.Forms.Button();
+            this.btnComprobar6 = new System.Windows.Forms.Button();
+            this.btnComprobar5 = new System.Windows.Forms.Button();
+            this.btnComprobar4 = new System.Windows.Forms.Button();
+            this.btnComprobar3 = new System.Windows.Forms.Button();
+            this.btnComprobar1 = new System.Windows.Forms.Button();
+            this.btnComprobar2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPuntaje = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnComprobar = new System.Windows.Forms.Button();
             this.lblRespuesta = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.lblDatos = new System.Windows.Forms.Label();
             this.lblVida = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblVidas = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnNextLevel = new System.Windows.Forms.Button();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblVidas = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +59,7 @@ namespace PresentacionUnirPuntos
             // 
             this.pnlPantalla.BackgroundImage = global::PresentacionUnirPuntos.Properties.Resources.fondo_acuarela_pintada_mano_forma_cielo_nubes;
             this.pnlPantalla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlPantalla.Location = new System.Drawing.Point(12, 198);
+            this.pnlPantalla.Location = new System.Drawing.Point(0, 198);
             this.pnlPantalla.Name = "pnlPantalla";
             this.pnlPantalla.Size = new System.Drawing.Size(1077, 570);
             this.pnlPantalla.TabIndex = 0;
@@ -61,6 +68,110 @@ namespace PresentacionUnirPuntos
             this.pnlPantalla.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlPantalla_MouseDown);
             this.pnlPantalla.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlPantalla_MouseMove);
             this.pnlPantalla.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlPantalla_MouseUp);
+            // 
+            // btnComprobar8
+            // 
+            this.btnComprobar8.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar8.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar8.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar8.Location = new System.Drawing.Point(309, 453);
+            this.btnComprobar8.Name = "btnComprobar8";
+            this.btnComprobar8.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar8.TabIndex = 12;
+            this.btnComprobar8.UseVisualStyleBackColor = false;
+            this.btnComprobar8.Click += new System.EventHandler(this.btnComprobar8_Click);
+            // 
+            // btnComprobar7
+            // 
+            this.btnComprobar7.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar7.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar7.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar7.Location = new System.Drawing.Point(300, 453);
+            this.btnComprobar7.Name = "btnComprobar7";
+            this.btnComprobar7.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar7.TabIndex = 11;
+            this.btnComprobar7.UseVisualStyleBackColor = false;
+            this.btnComprobar7.Click += new System.EventHandler(this.btnComprobar7_Click);
+            // 
+            // btnComprobar6
+            // 
+            this.btnComprobar6.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar6.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar6.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar6.Location = new System.Drawing.Point(309, 453);
+            this.btnComprobar6.Name = "btnComprobar6";
+            this.btnComprobar6.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar6.TabIndex = 10;
+            this.btnComprobar6.UseVisualStyleBackColor = false;
+            this.btnComprobar6.Click += new System.EventHandler(this.btnComprobar6_Click);
+            // 
+            // btnComprobar5
+            // 
+            this.btnComprobar5.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar5.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar5.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar5.Location = new System.Drawing.Point(309, 453);
+            this.btnComprobar5.Name = "btnComprobar5";
+            this.btnComprobar5.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar5.TabIndex = 9;
+            this.btnComprobar5.UseVisualStyleBackColor = false;
+            this.btnComprobar5.Click += new System.EventHandler(this.btnComprobar5_Click);
+            // 
+            // btnComprobar4
+            // 
+            this.btnComprobar4.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar4.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar4.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar4.Location = new System.Drawing.Point(309, 453);
+            this.btnComprobar4.Name = "btnComprobar4";
+            this.btnComprobar4.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar4.TabIndex = 8;
+            this.btnComprobar4.UseVisualStyleBackColor = false;
+            this.btnComprobar4.Click += new System.EventHandler(this.btnComprobar4_Click);
+            // 
+            // btnComprobar3
+            // 
+            this.btnComprobar3.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar3.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar3.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar3.Location = new System.Drawing.Point(309, 453);
+            this.btnComprobar3.Name = "btnComprobar3";
+            this.btnComprobar3.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar3.TabIndex = 7;
+            this.btnComprobar3.UseVisualStyleBackColor = false;
+            this.btnComprobar3.Click += new System.EventHandler(this.btnComprobar3_Click);
+            // 
+            // btnComprobar1
+            // 
+            this.btnComprobar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar1.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar1.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar1.Location = new System.Drawing.Point(318, 453);
+            this.btnComprobar1.Name = "btnComprobar1";
+            this.btnComprobar1.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar1.TabIndex = 5;
+            this.btnComprobar1.UseVisualStyleBackColor = false;
+            this.btnComprobar1.Click += new System.EventHandler(this.btnComprobar1_Click);
+            // 
+            // btnComprobar2
+            // 
+            this.btnComprobar2.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprobar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprobar2.ForeColor = System.Drawing.Color.Transparent;
+            this.btnComprobar2.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
+            this.btnComprobar2.Location = new System.Drawing.Point(309, 453);
+            this.btnComprobar2.Name = "btnComprobar2";
+            this.btnComprobar2.Size = new System.Drawing.Size(121, 111);
+            this.btnComprobar2.TabIndex = 6;
+            this.btnComprobar2.UseVisualStyleBackColor = false;
+            this.btnComprobar2.Click += new System.EventHandler(this.btnComprobar2_Click);
             // 
             // panel1
             // 
@@ -73,6 +184,19 @@ namespace PresentacionUnirPuntos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1307, 189);
             this.panel1.TabIndex = 1;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(140, 58);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(194, 69);
+            this.lblUsuario.TabIndex = 6;
+            this.lblUsuario.Text = "label1";
             // 
             // lblPuntaje
             // 
@@ -97,19 +221,6 @@ namespace PresentacionUnirPuntos
             this.label2.Size = new System.Drawing.Size(176, 51);
             this.label2.TabIndex = 1;
             this.label2.Text = "Puntaje";
-            // 
-            // btnComprobar
-            // 
-            this.btnComprobar.BackColor = System.Drawing.Color.Transparent;
-            this.btnComprobar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnComprobar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnComprobar.Image = global::PresentacionUnirPuntos.Properties.Resources.confirmar__1_;
-            this.btnComprobar.Location = new System.Drawing.Point(457, 468);
-            this.btnComprobar.Name = "btnComprobar";
-            this.btnComprobar.Size = new System.Drawing.Size(121, 111);
-            this.btnComprobar.TabIndex = 5;
-            this.btnComprobar.UseVisualStyleBackColor = false;
-            this.btnComprobar.Click += new System.EventHandler(this.btnComprobar_Click);
             // 
             // lblRespuesta
             // 
@@ -170,6 +281,18 @@ namespace PresentacionUnirPuntos
             this.panel2.Size = new System.Drawing.Size(200, 579);
             this.panel2.TabIndex = 2;
             // 
+            // lblVidas
+            // 
+            this.lblVidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblVidas.AutoSize = true;
+            this.lblVidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVidas.Location = new System.Drawing.Point(28, 264);
+            this.lblVidas.Name = "lblVidas";
+            this.lblVidas.Size = new System.Drawing.Size(144, 51);
+            this.lblVidas.TabIndex = 4;
+            this.lblVidas.Text = "label1";
+            // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
@@ -201,51 +324,33 @@ namespace PresentacionUnirPuntos
             this.btnNextLevel.UseVisualStyleBackColor = true;
             this.btnNextLevel.Click += new System.EventHandler(this.btnNextLevel_Click);
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(140, 58);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(194, 69);
-            this.lblUsuario.TabIndex = 6;
-            this.lblUsuario.Text = "label1";
-            // 
-            // lblVidas
-            // 
-            this.lblVidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblVidas.AutoSize = true;
-            this.lblVidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVidas.Location = new System.Drawing.Point(28, 264);
-            this.lblVidas.Name = "lblVidas";
-            this.lblVidas.Size = new System.Drawing.Size(144, 51);
-            this.lblVidas.TabIndex = 4;
-            this.lblVidas.Text = "label1";
-            // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PresentacionUnirPuntos.Properties.Resources.FondoVideojuego1;
             this.ClientSize = new System.Drawing.Size(1307, 768);
-            this.Controls.Add(this.btnComprobar);
+            this.Controls.Add(this.btnComprobar8);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnComprobar4);
+            this.Controls.Add(this.btnComprobar7);
             this.Controls.Add(this.txtRespuesta);
+            this.Controls.Add(this.btnComprobar6);
             this.Controls.Add(this.lblRespuesta);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnComprobar5);
+            this.Controls.Add(this.btnComprobar3);
             this.Controls.Add(this.pnlPantalla);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblDatos);
+            this.Controls.Add(this.btnComprobar2);
+            this.Controls.Add(this.btnComprobar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Juego";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Juego_Load);
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -266,10 +371,17 @@ namespace PresentacionUnirPuntos
         private System.Windows.Forms.Button btnNextLevel;
         private System.Windows.Forms.Label lblVida;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnComprobar;
+        private System.Windows.Forms.Button btnComprobar1;
         private System.Windows.Forms.Label lblRespuesta;
         private System.Windows.Forms.TextBox txtRespuesta;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblVidas;
+        private System.Windows.Forms.Button btnComprobar2;
+        private System.Windows.Forms.Button btnComprobar8;
+        private System.Windows.Forms.Button btnComprobar7;
+        private System.Windows.Forms.Button btnComprobar6;
+        private System.Windows.Forms.Button btnComprobar5;
+        private System.Windows.Forms.Button btnComprobar4;
+        private System.Windows.Forms.Button btnComprobar3;
     }
 }
